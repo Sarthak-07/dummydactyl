@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pterodactyl</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2d3a4b;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .login-container {
+            background-color: white;
+            border-radius: 8px;
+            padding-right: 40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .form-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .mascot {
+            width: 250px;
+            height: 250px;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-section {
+            flex-grow: 1;
+            max-width: 360px;
+        }
+        label {
+            display: block;
+            font-size: 12px;
+            color: #8b6e64;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 24px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #4287f5;
+            margin-bottom: 16px;
+            transition: background-color 0.3s;
+        }
+        .login-btn:hover {
+            background-color: #3b7ae0;
+        }
+        .paymenter-btn {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #6366f1;
+            margin-bottom: 16px;
+            transition: background-color 0.3s;
+        }
+        .paymenter-btn:hover {
+            background-color: #5b5ee7;
+        }
+        .forgot-password {
+            text-align: center;
+        }
+        .forgot-password a {
+            color: hsla(211,12%,43%);
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .copyright {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+        }
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 30px;
+            }
+            .form-content {
+                gap: 40px;
+            }
+        }
+        @media (max-width: 600px) {
+            .form-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .mascot {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+            .form-section {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Login to Continue</h1>
+    <div class="login-container">
+        <div class="form-content">
+            <img src="/pterodactyl.svg" alt="Pterodactyl" class="mascot">
+            <div class="form-section">
+                <form action="#" method="POST">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit" class="login-btn">LOGIN</button>
+                    <div class="forgot-password">
+                        <a href="#">FORGOT PASSWORD?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2015 - <script>document.write(new Date().getFullYear())</script> Pterodactyl Software
+    </div>
+</body>
+</html>
